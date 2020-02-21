@@ -13,7 +13,7 @@ export const getData = () => dispatch => {
     .catch(err => console.log(err, 'error retrieving data'))
 }
 
-export const addData = (newSmurf) = dispatch => {
+export const addData = (newSmurf) => dispatch => {
     axios.post('http://localhost:3333/smurfs',newSmurf)
     .then(res => {
         console.log('post', res.data);

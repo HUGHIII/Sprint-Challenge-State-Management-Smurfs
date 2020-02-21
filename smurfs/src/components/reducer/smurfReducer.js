@@ -22,7 +22,8 @@ export const smurfReducer = (state = initialState, action) => {
                 case POST_DATA:
                     return {
                         ...state,
-                        smurfs:action.payload
+                        smurfs:[...state.smurfs,action.payload]
                     }
+                    default: return state;
     }
 }
